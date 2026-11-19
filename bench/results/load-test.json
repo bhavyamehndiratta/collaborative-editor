@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-19T17:41:12.643Z",
+  "machine": "Apple M4, 10 cores, 16 GB",
+  "node": "v22.23.2",
+  "topology": "2 server processes, 1 Redis, 1 PostgreSQL, all on this machine",
+  "latency": [
+    {
+      "editors": 10,
+      "opsPerEditorPerSecond": 2,
+      "seconds": 20,
+      "sentOpsPerSecond": 19.9,
+      "deliveriesPerSecond": 179.99,
+      "sameInstanceMs": {
+        "count": 1600,
+        "p50": 13.18,
+        "p95": 14.67,
+        "p99": 15.02
+      },
+      "crossInstanceMs": {
+        "count": 2000,
+        "p50": 13.79,
+        "p95": 15.08,
+        "p99": 15.44
+      },
+      "errors": 0,
+      "generatorLoopLagP99Ms": 11.61,
+      "serverRssMb": [
+        77.98,
+        77.28
+      ]
+    },
+    {
+      "editors": 50,
+      "opsPerEditorPerSecond": 2,
+      "seconds": 20,
+      "sentOpsPerSecond": 99.9,
+      "deliveriesPerSecond": 4890.29,
+      "sameInstanceMs": {
+        "count": 47904,
+        "p50": 12.51,
+        "p95": 14.25,
+        "p99": 14.99
+      },
+      "crossInstanceMs": {
+        "count": 49900,
+        "p50": 12.72,
+        "p95": 14.53,
+        "p99": 15.35
+      },
+      "errors": 0,
+      "generatorLoopLagP99Ms": 11.74,
+      "serverRssMb": [
+        80.5,
+        78.98
+      ]
+    },
+    {
+      "editors": 100,
+      "opsPerEditorPerSecond": 2,
+      "seconds": 20,
+      "sentOpsPerSecond": 199.79,
+      "deliveriesPerSecond": 19764.43,
+      "sameInstanceMs": {
+        "count": 195656,
+        "p50": 12.41,
+        "p95": 15.33,
+        "p99": 16.48
+      },
+      "crossInstanceMs": {
+        "count": 199649,
+        "p50": 12.77,
+        "p95": 15.64,
+        "p99": 17.23
+      },
+      "errors": 0,
+      "generatorLoopLagP99Ms": 11.69,
+      "serverRssMb": [
+        97.3,
+        92.45
+      ]
+    },
+    {
+      "editors": 200,
+      "opsPerEditorPerSecond": 2,
+      "seconds": 20,
+      "sentOpsPerSecond": 399.81,
+      "deliveriesPerSecond": 79585.83,
+      "sameInstanceMs": {
+        "count": 791846,
+        "p50": 12.05,
+        "p95": 16.75,
+        "p99": 18.84
+      },
+      "crossInstanceMs": {
+        "count": 799844,
+        "p50": 12.42,
+        "p95": 17.07,
+        "p99": 19.41
+      },
+      "errors": 0,
+      "generatorLoopLagP99Ms": 12.36,
+      "serverRssMb": [
+        116.94,
+        112.92
+      ]
+    }
+  ],
+  "write": {
+    "writers": 8,
+    "opsPerWriter": 20000,
+    "batchSize": 500,
+    "totalOps": 160000,
+    "seconds": 1.24,
+    "persistedOpsPerSecond": 128524
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "when": "2026-11-19T10:15:53.550Z",
+  "n": 100000,
+  "blockSize": "default (512)",
+  "hardware": {
+    "cpu": "Apple M4",
+    "cores": 10,
+    "memoryGB": 16,
+    "platform": "darwin 24.5.0",
+    "node": "v22.23.2"
+  },
+  "results": {
+    "local_append_total_ms": 108.35,
+    "local_append_us_per_op": 1.083,
+    "local_random_insert_total_ms": 154.54,
+    "local_random_insert_us_per_op": 1.545,
+    "remote_apply_in_order_total_ms": 106.511,
+    "remote_apply_in_order_us_per_op": 1.065,
+    "remote_apply_reverse_total_ms": 59.871,
+    "remote_apply_reverse_us_per_op": 0.599,
+    "text_read_total_ms": 5.607,
+    "text_read_us_per_op": 5606.708,
+    "bytes_per_char_random_insert": 423.538,
+    "local_random_delete_total_ms": 61.225,
+    "local_random_delete_us_per_op": 1.225,
+    "nodes_before_compact": 100000,
+    "tombstones_before_compact": 50000,
+    "compact_ms": 24.8,
+    "nodes_removed_by_compact": 22640,
+    "nodes_after_compact": 77360,
+    "heap_bytes_before_compact": 230306560,
+    "heap_bytes_after_compact": 220899920
+  }
+}

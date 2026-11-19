@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: collab
+          POSTGRES_PASSWORD: collab
+          POSTGRES_DB: collab
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U collab"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      REDIS_URL: redis://localhost:6379
+      DATABASE_URL: postgres://collab:collab@localhost:5432/collab
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run build -w @collab/client
+      - run: npm run lint
+      - run: npm test
+      - run: npm run test:property

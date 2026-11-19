@@ -1,0 +1,30 @@
+{
+  "name": "collaborative-editor",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:property": "PBT_RUNS=10000 vitest run tests/property",
+    "bench:crdt": "tsx bench/crdt-bench.ts",
+    "server": "npm run build && node packages/server/dist/main.js",
+    "test:sweep": "tsx bench/property-sweep.ts",
+    "bench:load": "npm run build && tsx bench/load-test.ts",
+    "readme": "node scripts/update-readme.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "eslint": "^10.15.0",
+    "fast-check": "^4.10.3",
+    "prettier": "^3.10.1",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
+  }
+}

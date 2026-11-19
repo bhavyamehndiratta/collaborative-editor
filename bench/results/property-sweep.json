@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-19T17:35:09.216Z",
+  "machine": "Apple M4, 10 cores, 16 GB",
+  "node": "v22.23.2",
+  "properties": 3,
+  "seeds": 10,
+  "runsPerProperty": 10000,
+  "totalHistories": 300000,
+  "allPassed": true,
+  "results": [
+    {
+      "seed": 1,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 2
+    },
+    {
+      "seed": 2,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.8
+    },
+    {
+      "seed": 3,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.8
+    },
+    {
+      "seed": 4,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.8
+    },
+    {
+      "seed": 5,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.8
+    },
+    {
+      "seed": 6,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.8
+    },
+    {
+      "seed": 7,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.7
+    },
+    {
+      "seed": 8,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.8
+    },
+    {
+      "seed": 9,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 2
+    },
+    {
+      "seed": 10,
+      "runsPerProperty": 10000,
+      "passed": true,
+      "seconds": 1.8
+    }
+  ]
+}
