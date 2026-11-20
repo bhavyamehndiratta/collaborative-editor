@@ -10,10 +10,10 @@ export function newReplicaId(): string {
 export function localIdentity(replicaId: string): { name: string; color: string } {
   let name: string | null = null;
   try {
-    name = localStorage.getItem('collab-name');
+    name = new URLSearchParams(location.search).get('name') ?? sessionStorage.getItem('collab-name');
     if (name === null) {
       name = `Guest ${Math.floor(1000 + Math.random() * 9000)}`;
-      localStorage.setItem('collab-name', name);
+      sessionStorage.setItem('collab-name', name);
     }
   } catch {
     name = `Guest ${Math.floor(1000 + Math.random() * 9000)}`;
